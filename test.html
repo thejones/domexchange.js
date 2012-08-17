@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>domexchange.js</title>
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            color: #ffffff;
+            background-color: #000;
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 88px;
+        }
+
+        h1, h3 {
+            color: #33FF66;
+            text-align: center;
+        }
+
+        .main {
+            color: #33FFCC;
+        }
+
+        .secondary {
+            color: #00FFFF;
+        }
+
+        .shadows {
+
+            text-shadow: #ffffff 1px 1px, #ffffff 2px 2px, #ffffff 3px 3px, #ffffff 4px 4px, #ffffff 5px 5px, #ffffff 6px 6px, #ffffff 7px 7px;
+        }
+
+        #fullWidth {
+            width: 100%;
+            font-size: 22px;
+
+            background-color: #303030;
+        }
+
+        #fullWidth p {
+            text-align: center;
+            font-size: 22px;
+            margin: 5px;
+
+            background-color: #303030;
+        }
+
+        #wrap {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        #right {
+            float: right;
+            width: 300px;
+        }
+
+        #left {
+            float: left;
+            width: 660px;
+        }
+
+    </style>
+
+    <script>
+        var dojoConfig = {
+            async:true,
+            packages:[
+                {
+                    name:"thejones",
+                    location:location.pathname.replace(/\/[^/]+$/, "/")
+                }
+            ]
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.8.0/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require(["thejones/domexchange", "dojo/domReady!"], function (domexchange) {
+
+            domexchange.exchange();
+        });
+    </script>
+</head>
+<body id="m">
+<h1 class="shadows">Welcome to the domexchange</h1>
+
+<h3>Trying to help you. Just not the kind of help you need.</h3>
+
+<div id="fullWidth">
+
+    <p>This page is the sample page for the domexchange.js project. It is a utility library for taking elements on the
+        page and relocating them. It will help destroy your mark up and with any luck at all make your web page look
+        like that piece of sh$t artwork that your kid has on the fridge. </p>
+</div>
+<div id="wrap">
+    <div id="left">
+        <div class="main">
+            <p>This is a paragraph inside the main div.</p>
+
+            <p>This is the second paragrah in the same div</p>
+        </div>
+        <div class="secondary">
+            <p>This is a paragraph inside the secondary div. <span>Span tag in the secondary div</span></p>
+
+        </div>
+    </div>
+    <div id="right">
+        <div class="top">
+            <p>This is a paragraph inside the top div.</p>
+
+            <p>This is the second paragrah in the same top div</p>
+        </div>
+        <div class="bottom">
+            <p>This is a paragraph inside the bottom div.</p>
+
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript at the bottom -->
+
+</body>
+</html>
